@@ -9,7 +9,7 @@ export const basePersons: IPersonData[] = [{
     imageUrl: imgSam
 },
     {
-        name: 'Din Winchester',
+        name: 'Dean Winchester',
         desc: 'One of the greatest monster hunters in the world',
         imageUrl: imgDean
     }

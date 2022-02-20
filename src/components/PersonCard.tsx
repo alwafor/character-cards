@@ -17,22 +17,20 @@ export const PersonCard: React.FC<IProps> = ({
                                                  }
                                              }) => {
 
-
     return (
         <Box
             d={'flex'}
             p={4}
             flexDirection={'column'}
-            border={'1px solid gray'}
             justifyContent={'center'}
             alignItems={'center'}
             maxW={'500px'}
             borderRadius={'15px'}
-            backgroundColor={'#e1e1e1'}
+            backgroundColor={'#252427'}
         >
             <Image userSelect={'none'} borderRadius={'100px'} src={imageUrl} boxSize={['50px', '100px']}
                    objectFit={'cover'}/>
-            <BoxMotion color={'black'} fontSize={'24px'} fontWeight={'bold'}
+            <BoxMotion fontSize={'24px'} fontWeight={'bold'}
                        initial={{
                            opacity: 0
                        }}
@@ -46,13 +44,13 @@ export const PersonCard: React.FC<IProps> = ({
             <BoxMotion
                 initial={{
                     opacity: 0,
-                    paddingRight: '150px'
+                    transform: 'translate(-100px)'
                 }}
                 animate={{
-                    paddingRight: 0,
-                    opacity: 1
+                    opacity: 1,
+                    transform: 'translate(0px)'
                 }}
-                transition={{duration: 2}}
+                transition={{duration: 1.5}}
             >
                 {desc}
             </BoxMotion>

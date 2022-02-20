@@ -2,6 +2,7 @@ import React, {useState} from 'react'
 import {PersonCard} from "./components/PersonCard"
 import {IPersonData} from "./types/baseTypes"
 import {basePersons} from "./data/persons"
+import {Box} from "@chakra-ui/react";
 
 
 function App() {
@@ -9,7 +10,9 @@ function App() {
 
     return (
         <div className="App">
-            {persons.map(person => <PersonCard personData={person} key={person.imageUrl}/>)}
+            <Box d={'flex'} justifyContent={'space-around'}>
+                {persons.map(person => <PersonCard personData={person} key={person.imageUrl}/>)}
+            </Box>
         </div>
     )
 }

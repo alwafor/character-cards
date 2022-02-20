@@ -24,12 +24,14 @@ export const PersonCard: React.FC<IProps> = ({
             p={4}
             flexDirection={'column'}
             border={'1px solid gray'}
-            borderRadius={4}
             justifyContent={'center'}
             alignItems={'center'}
             maxW={'500px'}
+            borderRadius={'15px'}
+            backgroundColor={'#e1e1e1'}
         >
-            <Image borderRadius={'100px'} src={imageUrl} boxSize={['50px', '100px']} objectFit={'cover'}/>
+            <Image userSelect={'none'} borderRadius={'100px'} src={imageUrl} boxSize={['50px', '100px']}
+                   objectFit={'cover'}/>
             <BoxMotion color={'black'} fontSize={'24px'} fontWeight={'bold'}
                        initial={{
                            opacity: 0
@@ -37,7 +39,10 @@ export const PersonCard: React.FC<IProps> = ({
                        animate={{
                            opacity: 1
                        }}
-                       transition={{duration: 2}}>{name}</BoxMotion>
+                       transition={{duration: 2}}
+            >
+                {name}
+            </BoxMotion>
             <BoxMotion
                 initial={{
                     opacity: 0,
@@ -47,7 +52,11 @@ export const PersonCard: React.FC<IProps> = ({
                     paddingRight: 0,
                     opacity: 1
                 }}
-                transition={{duration: 2}}>{desc}</BoxMotion>
+                transition={{duration: 2}}
+            >
+                {desc}
+            </BoxMotion>
+
         </Box>
     )
 }
